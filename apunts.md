@@ -16,10 +16,12 @@ Index
 	+ [2.6 Excepcions](#26-excepcions)
 	+ [2.7 Syscalls](#27-syscalls)
 		- [2.7.1 Fast Syscalls](#271-fast-syscalls)
-+ [**3.Espai de direccions d'un procés**](#3-espai-de-direccions-dun-procés)
++ [**3. Espai de direccions d'un procés**](#3-espai-de-direccions-dun-procés)
 	+ [3.1 Generació d'executables](#31-generació-dexecutables)
 	+ [3.2 Espais d'adreces](#32-espais-dadreces)
 	+ [3.3 MMU (Memory Management Unit)](#33-mmu-memory-management-unit)
++ [**4. Gestió de processos**](#4-gestió-de-processos)
+	+ [4.1 Estructures de dades](#41-estructures-de-dades)
 
 
 	
