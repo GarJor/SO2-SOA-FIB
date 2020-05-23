@@ -306,7 +306,7 @@ Per organitzar les tasques, els PCBs s'agrupen en llistes doblement encadenades.
 
  - **Ready:** Conté els processos que esperen a que el planificador els dongui pas a la cpu  .
  - **Free:** Conté aquells PCBs lliures preparats per quan un nou procés els necessiti.
- - **Run:** Procés/os en execució. En zeos no existeix. Estar _run_ és igual a no tenir 
+ - **Run:** Procés/os en execució. En zeos no existeix. Estar _run_ és igual a no estar a cap llista
 
 ### 4.2 Operacions
 Operacions que es poden fer ambn els processos
