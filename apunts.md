@@ -213,7 +213,7 @@ Ens permet estalviar-nos les comprovacions de permissos de la IDT i fer més sen
 ### 3.2 Espais d'adreces
 **Espai de direccions lògic del processador:** Rang de direccions a les que pot accedir un processador. Depèn del tamany del bus.
 
-**Espai de direccions lògic del procés:** Espai d'un procés en execució. Són les adreces (logiques) que pot accedir el proces.
+**Espai de direccions lògic del procés:** Espai d'un procés en execució. Són les adreces (logiques) que pot accedir el proces. Relatives a una direccio 0, igual per a tots els procesos.
 
 **Espai de direccions físic del procés:** Espai d'adreces de memòria física associades a les adreces lògiques del procés.
 
