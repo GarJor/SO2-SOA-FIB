@@ -325,14 +325,17 @@ _Com se sap quin procés s'està executant?_
 		return current()->PID;  //La crida a current fa aquesta mascara mencionada.
 	}
 ```
+
 #### 4.2.2 Canvi de context
+
 Es basa en guardar el context d'un procés per poder-lo executar més tard i passar a executar-ne un d'altre.
 
 Es guarda el context en la pila de sistema i al PCB es guarda la posició de la pila que permet recuperar aquest context.
 
 **Cal guardar:**
  
- - Context HW (registres necessaris): Els recursos HW són compartits. 
+ - Context HW (registres necessaris)
+>  Els recursos HW són compartits. 
  
 **No cal guardar:**
  
