@@ -395,15 +395,16 @@ void inner_task_switch(union task_union*t){   //Punter a la task union del nou p
 ```
 #### 4.2.3 Creació de processos
 És pot fer per mitja de duplicar el procés (copiar codi i dades) per mitjà de la crida `fork` o duplicar el fluxe (compartint l'espai de direccions amb el pare, threads en OpenMP) per mitjà de la crida `clone`. Aquí es tractarà només el `fork`. La creació de threads es tracta en un apartat posterior. 
-`int fork()`: Crida a sistema que ens permet generat un procés. La seva implementació es descriu a continuació:
+
+**`int fork()`**: Crida a sistema que ens permet generat un procés. La seva implementació es descriu a continuació:
 
 0. Estat inicial: Tenim un procés amb codi i dades d'usuari.
 1. Obtenir PCB lliure: A la cua de `free`.
 2. Inicialitzar PCB: Bàsicament copiar el del pare al fill.
 3. Inicialitzar l'espai d'adreces: Carregar un executable (no fet a zeos) o heredar del pare dades i codi:
-⋅⋅1. Cerquem pàgines físiques lliures.
+	3.1 Cerquem pàgines físiques lliures.
 	
-	3.2. Mapejem al nou procés el codi de sistema i el d'usuari. Aquest serà compartit.
+	3.2 Mapejem al nou procés el codi de sistema i el d'usuari. Aquest serà compartit.
 	
 	3.4 Mapegem les adreces físiques que hem obtingut al punt 3.1 a l'espai d'adreces lògic del procés nou.
 	
