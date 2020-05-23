@@ -726,7 +726,7 @@ Múltiples processos executant el mateix codi amb dades compartides -> Generem p
 
 **Processos Multifluxe:** Permetre diferents seqüències d'execució simultànies d'un mateix procés.
 
-**Fluxe:** Cada una d'aquestes seqüències. És la unitat mínima de treball de la CPU. Cada fluxe d'un procés comparteix tots els recursos i totes les característiques. Cada fluxe està associat a(és a dir, cada thread té únicament) **una pila, un program counter i un banc de registres**. La resta de recursos és compratit entre els fluxes.
+**Fluxe:** Cada una d'aquestes seqüències. És la unitat mínima de treball de la CPU. Cada fluxe d'un procés comparteix tots els recursos i totes les característiques. Cada fluxe està associat a (és a dir, cada thread té un/a únic/a) **una pila, un program counter i un banc de registres**. La resta de recursos és compratit entre els fluxes.
 
 _Què guanyem usant fluxes en ves de processos?_
 
