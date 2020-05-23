@@ -213,7 +213,7 @@ Ens permet estalviar-nos les comprovacions de permissos de la IDT i fer més sen
 ### 3.2 Espais d'adreces
 **Espai de direccions lògic del processador:** Rang de direccions a les que pot accedir un processador. Depèn del tamany del bus.
 
-**Espai de direccions lògic del procés:** Espai d'un procés en execució. Són les adreces que usa el proces.
+**Espai de direccions lògic del procés:** Espai d'un procés en execució. Són les adreces (logiques) que pot accedir el proces.
 
 **Espai de direccions físic del procés:** Espai d'adreces de memòria física associades a les adreces lògiques del procés.
 
@@ -228,7 +228,7 @@ CPU -> unitat de segmentació -> unitat de paginació -> memòria física
        \___________________________________________/
                              MMU
  ```
- Un procés està dividit en segments i un segment està dividit en pàgines. Els segments normalment són _codi_, _dades_, _pila_ i _heap_.
+ Un procés està dividit en **_segments_** i un segment està dividit en **_pàgines_**. Els segments normalment són _codi_, _dades_, _pila_ i _heap_.
  
  - **Unitat de segmentació:** Usa la  taula de segments que apunta a la base de cada segment. Aquesta taula és única per proces. Aquesta taula s'anomena _GDT_.
  - **Unitat de paginació:** És l'encarregada de fer la paginació. _Com ho fem?_ 
