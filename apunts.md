@@ -39,7 +39,7 @@ Index
 
  **OS kernel:** Inicia el SO. Estructures internes, hardware necessari etc.
 
-****** 
+------------------------------------------------------------------
 ## 2. Mecanismes d'entrada al sistema
 
  Cal separar el codi provilegiat del codi d'usuari. Calen mecanismes per comunicar aquests dos codis. El sistema monopolitza tot l'accés a dispositius i prevé que els usuaris hi accedeixin de manera no controlada.
