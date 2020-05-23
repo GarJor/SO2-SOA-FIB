@@ -202,16 +202,19 @@ Ens permet estalviar-nos les comprovacions de permissos de la IDT i fer més sen
 -----------------------------------------------
 
 ## 3. Espai de direccions d'un procés
+
 ### 3.1 Generació d'executables
  - **Fase 1:**
    - **Compilació:** D'alt nivell a codi objecte
-   - **Montatge:** Creació d'executables a partir de codi objecte i llibreries. La diferència entre l'obkecte i l'executable són les adreces. Les del objecte són relatives a l'inici de l'objecte. L'executable te unes capçaleres amb els segments definits.
+   - **Montatge:** Creació d'executables a partir de codi objecte i llibreries. La diferència entre l'objecte i l'executable són les adreces. Les del objecte són relatives a l'inici de l'objecte. L'executable te unes capçaleres amb els segments definits.
  - **Fase 2:**
     - **Carregador:** Carrega l'executable en memòria allà on cal.
  
 ### 3.2 Espais d'adreces
 **Espai de direccions lògic del processador:** Rang de direccions a les que pot accedir un processador. Depèn del bus.
+
 **Espai de direccions lògic del procés:** Espai d'un procés en execució. Són les adreces que usa el processador.
+
 **Espai de direccions físic del procés:** Espai d'adreces de memòria física associades a les adreces lògiques del procés.
 
 _Cal doncs una traducció_ -> **MMU** Memory Management Unit. Unitat de HW per fer la traducció.
