@@ -668,7 +668,7 @@ void sys_exit()
 
 _Aquestes fases es poden representar en un diagrama de Gantt_
 
-**Estat de bloqueig:** Un procés es bloqueja quan ha fet una crida a sistema bloquejant i per tant està esperant un event que li impedeix avançar en l'execució. Quan es bloqueja, el PCB s'envia a una cua de _blocked_ fins que la finalització de la crida el mou a `ready` (apropiació diferida) o a `run` (apropiació directa).
+**Estat de bloqueig:** Que no esta en execucio, normalment vol dir que esta a una cua de _blocked_ fins que algu el mou a `ready` (**_apropiació diferida_**) o a `run` (**_apropiació directa_**).
 
 **Algoritme del planificador:**
 ```C
@@ -685,11 +685,13 @@ void schedule (void)
 
 ```
 
+
 ##### 4.2.5.1 Polítiques de planificació de processos
 
  **No apropiatives:** El sistema usa la CPU fins que es bloqueja
+
  **Apropiatives:** EL planificadort pot expulsar un procés de la CPU.
- 	- Diferides: Al cap d'un temps es fa la planificació
+	- Diferides: Al cap d'un temps es fa la planificació
 	- Immediates: Es fa sempre que hi ha un canvi.
  
  Per a dur a terme aquestes polítiques, s'usen cues. Cada cua pot tenir una política diferent.
