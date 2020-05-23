@@ -401,7 +401,7 @@ void inner_task_switch(union task_union*t){   //Punter a la task union del nou p
 1. Obtenir PCB lliure: A la cua de `free`.
 2. Inicialitzar PCB: Bàsicament copiar el del pare al fill.
 3. Inicialitzar l'espai d'adreces: Carregar un executable (no fet a zeos) o heredar del pare dades i codi:
-..3. Cerquem pàgines físiques lliures.
+⋅⋅1. Cerquem pàgines físiques lliures.
 	
 	3.2. Mapejem al nou procés el codi de sistema i el d'usuari. Aquest serà compartit.
 	
