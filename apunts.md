@@ -1,28 +1,3 @@
----
-title: "Apunts SO2"
-abstract: "Retocs dels [apunts d'en Quim.](https://github.com/ferrerax/SO2-SOA-FIB)"
-author: Jordi Garcia
-
-### 
-### Formatting settings
-###
-#documentclass: article
-fontsize: 12pt
-#geometry: margin=1.0in
-#geometry: "left=3cm,right=3cm,top=2cm,bottom=2cm"
-header-includes:
-    - \usepackage{times}
-urlcolor: blue
-
-
-###
-### Markdown Preview Enhanced package settings
-###
-output:
-    pdf_document:
-        toc: false
-        number_sections: true
----
 
 # Apunts finals de SO2 (i SOA)
 Aquests apunts inclouen tot el temari del QP2020 (el del coronavirus) d'SO2/SOA
