@@ -1,6 +1,7 @@
 # Apunts finals de SO2 (i SOA)
 Aquests apunts inclouen tot el temari del QP2020 (el del coronavirus) d'SO2/SOA
 
+--------------------------------------------------------------
 Index
 =====
 
