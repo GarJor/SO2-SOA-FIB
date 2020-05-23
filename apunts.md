@@ -127,7 +127,7 @@ ss: stack segment. Conté el segment de memòria de dades on es troba la pila.
  **Handler:** Escrit en assabler. Depèn de l'aquitectura. És el punt bàsic d'entrada al sistema, fa la gestió del hw necessaria i crida a la rutina de la interrupció. Té els seguents passos:
 
 - **Save All**: Guardar els registres del sistema (tots ells).  
-- **EOI (Només per les interrupcions HW)**: Notfica al PIC contoller que s'acabo la interrupt. Es fa aquí per si hi ha un canvi de tasca en plena interrupció (no es podria tractar cap altre int hw fins que es reprengues l'execucio de la tasca altre cop). 
+- **EOI (Només per les interrupcions HW)**: Notfica al PIC contoller que s'acabo la interrupt. Es fa aquí per si hi ha un canvi de context en plena interrupció (no es podria tractar cap altre int hw fins que es reprengues l'execucio de la tasca altre cop). 
 - **Crida** a la rutina.
 - **Restore All**: Es restaura els registres que s'han guardat amb el _save all_
 - **Retorn**. Es fa per mitja de la comanda **`iret`**.
@@ -304,9 +304,9 @@ Un procés està dividit en **_segments_** i un segment està dividit en **_pàg
 
 Per organitzar les tasques, els PCBs s'agrupen en llistes doblement encadenades. En zeos la llista és el camp `list` del PCB:
 
- - **Ready:** Conté els processos que esperen a que el planificador els dongui pas a la cpu  .
+ - **Ready:** Conté els processos que esperen a que el planificador els dongui pas a la cpu.
  - **Free:** Conté aquells PCBs lliures preparats per quan un nou procés els necessiti.
- - **Run:** Procés/os en execució. En zeos no existeix. Estar _run_ és igual a no estar a cap llista
+ - **Run:** Procés/os en execució. En zeos no existeix. Estar _run_ és igual a no estar a cap llista.
 
 ### 4.2 Operacions
 Operacions que es poden fer ambn els processos
@@ -319,12 +319,12 @@ _Com se sap quin procés s'està executant?_
  - Windows: Hi ha una cua de RUN que ens indica quin procés s'executa per cada processador.
  - Linux: Es calcula amb el punter a la pila. Les `task_union` estan alineades a pàgina (els útlims 8 bits estan a 0). Per tant només cal fer una màscara amb l'`esp` de la pila de sistema:
  
- ```C
+```C
  	int sys_getpid()
 	{
-	return current()->PID;  //La crida a current fa aquesta mascara mencionada.
+		return current()->PID;  //La crida a current fa aquesta mascara mencionada.
 	}
-  ```
+```
 
 #### 4.2.2 Canvi de context
 Es basa en guardar el context d'un procés per poder-lo executar més tard i passar a executar-ne un d'altre.
