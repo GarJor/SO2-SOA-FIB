@@ -403,7 +403,7 @@ void inner_task_switch(union task_union*t){   //Punter a la task union del nou p
 2. Inicialitzar PCB: Bàsicament copiar el del pare al fill.
 3. Inicialitzar l'espai d'adreces: Heredar del pare dades i codi:
 
-	3.1 Cerquem pàgines físiques lliures.
+	3.1 Cerquem pàgines físiques lliuresO.
 	
 	3.2 Mapejem al nou procés el codi de sistema i el d'usuari. Aquest serà compartit.
 	
