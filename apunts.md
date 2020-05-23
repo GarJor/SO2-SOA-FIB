@@ -702,7 +702,7 @@ void schedule (void)
 
 **FCFS:** First come, first served. No apropiatiu. Algoritme de _tonto el último_. 
 
-**Prioritats:** cada procés té assignada una prioritat. Entre processos de igual prioritat és fifo. Pot provocar inanció. 
+**Prioritats:** cada procés té assignada una prioritat. Entre processos de igual prioritat és fifo. Pot provocar inanició. 
 
 **Round Robin:** A _pito-pito_. Es canvia cada cop que a un procés se li acaba el quantum. Es poden aplicar priotitats. Cal pensar que podem tenir moltes cues amb algoritmes diferents i polítiques diferents.
 
@@ -726,15 +726,15 @@ Múltiples processos executant el mateix codi amb dades compartides -> Generem p
 
 **Processos Multifluxe:** Permetre diferents seqüències d'execució simultànies d'un mateix procés.
 
-**Fluxe:** Cada una d'aquestes seqüències. És la unitat mínima de treball de la CPU. Cada fluxe d'un procés comparteix tots els recursos i totes les característiques. Cada fluxe està associat (és a dir, cada thread té únic) a **una pila, un program counter i un banc de registres**.La resta de recursos és compratit entre els fluxes.
+**Fluxe:** Cada una d'aquestes seqüències. És la unitat mínima de treball de la CPU. Cada fluxe d'un procés comparteix tots els recursos i totes les característiques. Cada fluxe està associat a(és a dir, cada thread té únicament) **una pila, un program counter i un banc de registres**. La resta de recursos és compratit entre els fluxes.
 
 _Què guanyem usant fluxes en ves de processos?_
 
  - Perdem overhead de gestió: creació destrucció i canvi de context ens els evitem.
  - Aprofitem recursos
- - Com que compartim dades la comunicació entre threads és més senzilla -> OJU! problemes de condició de carrera que respoldrem més tard.
+ - Com que compartim dades la comunicació entre threads és més senzilla -> OJU! problemes de condició de carrera que resoldrem més tard.
  - Ens permet explotar el paral·lelisme i la concurrència.
- - Millorem la modulaitat de les aplicacions perquè podem encapsular les feines.
+ - Millorem la modularitat de les aplicacions perquè podem encapsular les feines.
  - Podem crear fluxes destinats a E/S per fer-ho de forma asíncrona.
  - Podem atendre a varies peticions en un servidor.
  
@@ -744,7 +744,7 @@ _Què guanyem usant fluxes en ves de processos?_
   
   - Linux no fa distinció entre threads i processos a l'hora de planificar. Tot són tasques que poden compartir o no els recursos amb altres tasques. En un thread, el `task_struct` conté punters enlloc de dades.
  
- **`int clone ( int (*fn) (void *), void *child_stack, int flags, void *arg )`:** Retorna el PID del _procés_ creat (recordar que hem dit que el planificador no distingeix entre processos i threads). Reb com a paràmetre el punter a una funció, una zona de memòria per usar com a pila, les flags i el argument de la funció.
+ **`int clone ( int (*fn) (void *), void *child_stack, int flags, void *arg )`:** Retorna el PID del _procés_ creat (recordar que hem dit que el planificador no distingeix entre processos i threads). Rep com a paràmetre el punter a una funció, una zona de memòria per usar com a pila, les flags i el argument de la funció.
  
  POSIX ens proporciona una interfície per la gestió dels threads -> la llibreria `pthreads`. Permet:
  
