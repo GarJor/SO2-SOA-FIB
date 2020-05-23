@@ -26,7 +26,9 @@ Index
 	+ [4.2 Operacions](#42-operacions)
 		- [4.2.1 Identificació](#421-identificació)
 		- [4.2.2 Canvi de context](#422-canvi-de-context)
-
+		- [4.2.3 Creació de processos](#423-creació-de-processos)
+		- [4.2.4 Destrucció de processos](#424-destrucció-de-processos)
+		- [4.2.5 Planificador de processos](#425-planificador-de-processos)
 
 
 	
@@ -647,11 +649,12 @@ void sys_exit()
 }
 ```
 #### 4.2.5 Planificador de processos
+
 **Procés idle:** Procés del sistema que ocupa la CPU quan no hi ha ningú per fer-ho. És un procés que corre en mode sistema i no forma part de cap cua.
 
 **Procés init:** Procés incial del sistema. Tots els processos són fills d'aquest. 
 
-**Cal un sistema que gestioni els canvis de procés perquè tots s'executin** -> Planificador de processos.
+> **Cal un sistema que gestioni els canvis de procés perquè tots s'executin** -> Planificador de processos.
 
 **Planificador de processos:** S'encarrega de decidir quan els processos passen de `ready` a `run` i vicervesa. En un sistema linux normal n'hi ha 3:
 
@@ -659,7 +662,8 @@ void sys_exit()
  - A mitjà termini: Encarregat del swap. S'executa quan hi ha escasetat de memòria.
  - A curt termini: Selecciona el següent procés a executar i s'executa cada X temps decidit per la política.
 
-**Ràfega de CPU:** Temps consegutiu que un procés està en CPU.
+**Ràfega de CPU:** Temps consecutiu que un procés està en execucio.
+
 **Ràfega d'E/S:** Temps consecutiu que un procés està en una operació d'E/S.
 
 _Aquestes fases es poden representar en un diagrama de Gantt_
