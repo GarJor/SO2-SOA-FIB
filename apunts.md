@@ -297,11 +297,12 @@ Un procés està dividit en **_segments_** i un segment està dividit en **_pàg
   };
 ```
 
-**Les `task_union` s'agrupen en un vector. En linux normal està en memòria dinàmica. En zeos té 10 posicions i s'anmena `task`**
+> **Les `task_union` s'agrupen en un vector. En linux normal està en memòria dinàmica. En zeos té 10 posicions i s'anmena `task`**
 
-_Com s'organitzen els PCBs?_
 
-Els PCBs s'agrupen en llistes doblement encadenades. En zeos la llista és el camp `list` del PCB:
+#### 4.1.1 Llistes
+
+Per organitzar les tasques, els PCBs s'agrupen en llistes doblement encadenades. En zeos la llista és el camp `list` del PCB:
 
  - **Ready:** Conté els processos que esperen a que el planificador els dongui pas a la cpu  .
  - **Free:** Conté aquells PCBs lliures preparats per quan un nou procés els necessiti.
