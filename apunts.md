@@ -104,7 +104,7 @@ Taula que gestiona les interrupcions. Té 256 entrades:
 | ... | ... |
 | 255 | @handler_trap_206 |
 
-> __`El (trap) syscall_handler està a la posició 0x80`__. 
+__`El (trap) syscall_handler està a la posició 0x80`__. 
 
 ```asm
 	mov %eax, 4
