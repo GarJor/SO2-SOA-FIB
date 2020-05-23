@@ -237,9 +237,12 @@ CPU -> unitat de segmentació -> unitat de paginació -> memòria física
      
 **Directori:** És una taula de taules de pàgines. Ens permet multinivell. D'aquesta manera ens assegurem que només tenim les taules de pàgines que ens calen. EL registre ```cr3``` indicarà en tot moment on es troba aquest directori. Cada entrada del directori és una taula de pàgines. L'entrada al directori serà indexada pels bits de major pes de l'adreça lògica. D'aquesta manera usem bits que abans no usavem (una adreça física té 20 bits i una de lògica en té 32 així que usarem aquests 12 per indicar l'entrada del directori, és a dir, per indicar la taula de pàgines a usar).
      
-      **TLB:** Translation Lookaside Buffer. Ens permet tenir una caché de les adreces traduides. Per invalidar-la n'hi ha prou amb canviar el valor del registre `cr3`.
 
-------------------------     
+**TLB:** Translation Lookaside Buffer. Ens permet tenir una caché de les adreces traduides. Per invalidar-la n'hi ha prou amb canviar el valor del registre `cr3`.
+
+
+---------------------------------
+
 ## 4. Gestió de processos.
 **procés:** Executable carregat en memòria i en execució. Caracteritzat per:
  
