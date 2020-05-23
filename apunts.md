@@ -691,8 +691,9 @@ void schedule (void)
  **No apropiatives:** El sistema usa la CPU fins que es bloqueja
 
  **Apropiatives:** EL planificadort pot expulsar un procés de la CPU.
-	- Diferides: Al cap d'un temps es fa la planificació
-	- Immediates: Es fa sempre que hi ha un canvi.
+
+- Diferides: Al cap d'un temps es fa la planificació. 
+- Immediates: Es fa sempre que hi ha un canvi. 
  
  Per a dur a terme aquestes polítiques, s'usen cues. Cada cua pot tenir una política diferent.
  
