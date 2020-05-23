@@ -44,12 +44,12 @@ Index
 
  Cal separar el codi provilegiat del codi d'usuari. Calen mecanismes per comunicar aquests dos codis. El sistema monopolitza tot l'accés a dispositius i prevé que els usuaris hi accedeixin de manera no controlada.
  
->  **Instruccions privilegiades:** Aquelles que només pot usar l'SO. Quan una d'elles és executada, el HW comprova que estigui sent executada per codi de sistema. Si no es genera una excepció. 
+**Instruccions privilegiades:** Aquelles que només pot usar l'SO. Quan una d'elles és executada, el HW comprova que estigui sent executada per codi de sistema. Si no es genera una excepció. 
 
 `La quantitat de nivells d'execució que pot haver-hi és definit per l'aquitectura.`
 
  
->  **Crida a sistema:** Mecanisme de l'usuari per demanar recursos al sistema.
+**Crida a sistema:** Mecanisme de l'usuari per demanar recursos al sistema.
  
 
 ### 2.1 Interrupcions / Excepcions
