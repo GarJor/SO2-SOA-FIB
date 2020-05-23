@@ -19,7 +19,7 @@ Index
 + [**3.Espai de direccions d'un procés**](#3-espai-de-direccions-dun-procés)
 	+ [3.1 Generació d'executables](#31-generació-dexecutables)
 	+ [3.2 Espais d'adreces](#32-espais-dadreces)
-	+ [3.3 MMU (Memory Management Unit)](#33-mmu-memory-manegment-unit)
+	+ [3.3 MMU (Memory Management Unit)](#33-mmu-memory-management-unit)
 
 
 	
