@@ -199,6 +199,7 @@ Ens permet estalviar-nos les comprovacions de permissos de la IDT i fer més sen
  
 **Canvis en el wapper:** Com que no fem cap crida a `int`, coses que feia el HW les haurem de fer a manija. Haurem de fer el `save_all` i el `restore_all` i passar correctament els valors eip i esp al MSR.
  
+-----------------------------------------------
 
 ## 3. Espai de direccions d'un procés
 ### 3.1 Generació d'executables
