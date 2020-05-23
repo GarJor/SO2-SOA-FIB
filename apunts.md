@@ -722,7 +722,7 @@ Múltiples processos executant el mateix codi amb dades compartides -> Generem p
 
 **Concurrencia:** Quan un processador és compartit en el temps per varis fluxes. Es genera paral·lelisme quan hi ha fluxes executant-se en paral·lel.
 
- - Els processos mai compartiran la pila.
+>  **Els processos mai compartiran la pila.**
 
 **Processos Multifluxe:** Permetre diferents seqüències d'execució simultànies d'un mateix procés.
 
