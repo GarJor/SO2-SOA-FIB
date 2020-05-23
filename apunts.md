@@ -8,7 +8,7 @@ Index
 + [**1. Introducció**](#1-introducció)
 	+ [1.1 Boot](#11-boot)
 + [**2. Mecanismes d’entrada al sistema**](#2-mecanismes-dentrada-al-sisyema)
-	+ [2.1 Interrupcions / Excepcions](#-interrupcions--excepcions)
+	+ [2.1 Interrupcions / Excepcions](#21-interrupcions--excepcions)
 	+ [2.2 IDT (Instruction Descriptor Table)](#22-idt-instruction-descriptor-table)
 	+ [2.3 TSS (Task State Segment)](#23-tss-task-state-segment)
 	+ [2.4 Gestio de les interrupcions](#24-gestio-de-les-interrupcions)
@@ -16,6 +16,11 @@ Index
 	+ [2.6 Excepcions](#26-excepcions)
 	+ [2.7 Syscalls](#27-syscalls)
 		- [2.7.1 Fast Syscalls](#271-fast-syscalls)
++ [**3.Espai de direccions d'un procés**](#3-espai-de-direccions-dun-procés)
+	+ [3.1 Generació d'executables](#31-generació-dexecutables)
+	+ [3.2 Espais d'adreces](#32-espais-dadreces)
+
+
 	
 ----------------------------------------------------------------
 ## 1. Introducció
