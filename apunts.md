@@ -414,9 +414,9 @@ void inner_task_switch(union task_union*t){   //Punter a la task union del nou p
 	3.6 Desmapejem aquestes adreces de l'espai d'adreces del pare i fem _flush_ de la TLB. (Tocant el valor del registre `cr3`)
 
 4. Actualitzar el `task_union` del fill amb els nous valors pel PCB assignant un nou PID.
-5. Peparem la pila del fill per al task_switch (com si se n'hagués fet un perquè així sigui restaurable). L'adressa de retorn del fill serà una funció anomenada `return_from_fork` que farà que a la que el procés nou agafi el control, la crida a `fork()` feta retornarà 0. El pare retornara el PID assignat al fill.
+5. Peparem la pila del fill per al task_switch (com si se n'hagués fet un perquè així sigui restaurable). L'adressa de retorn del fill serà una funció anomenada `return_from_fork` que farà que a la que el procés nou agafi el control, la crida a `fork()` feta retornarà 0.
 6. Insertar el procés nou a la llista READY.
-7. Retornar el pid del nou procés creat. 
+7. Retornar el PID del nou procés creat. 
 
 ```C
 int sys_fork()
@@ -615,10 +615,10 @@ Es fa per mitjà de la crida `int exit()`. Ha de:
 	- PCB
 	- Espai de direccions.
 	- Altres coses que hagi pogut demanar com semàfors o memòria dinàmica.
-2. Posar el PCB a la llista de PCBs lliures
+2. Posar la tasca a la llista de tasques lliures
 3. Executar al planificador perquè esculli un nou procés.
 
-Nosaltres a zeos fem el `exit` sense paràmetres ni sicronització però en un linux normal, el procés pare es pot sincronitzar amb els fills per mitjà de la crida a `waitpid`. Això fa que el fill ha de mantenir informació sobre la seva mort en el PCB i doncs aquest no s'allibera fins que no es consulta aquesta informació (estat zombie). Si el pare mor sense fer el `waitpid` és el procés init (initial) qui _adopta_ els fills i fa el `waipid`.
+Nosaltres a zeos fem el `exit` sense paràmetres ni sicronització però en un linux normal, el procés pare es pot sincronitzar amb els fills per mitjà de la crida a `waitpid`. Això fa que el fill ha de mantenir informació sobre la seva mort en el PCB i doncs aquest no s'allibera fins que no es consulta aquesta informació (estat zombie). Si el pare mor sense fer el `waitpid` és el procés init (initial) qui _adopta_ els fills i fa el `waitpid`.
 
 ```C
 void sys_exit()
