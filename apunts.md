@@ -46,7 +46,7 @@ Index
  
 **Instruccions privilegiades:** Aquelles que només pot usar l'SO. Quan una d'elles és executada, el HW comprova que estigui sent executada per codi de sistema. Si no es genera una excepció. 
 
-`La quantitat de nivells d'execució que pot haver-hi és definit per l'aquitectura.`
+> `La quantitat de nivells d'execució que pot haver-hi és definit per l'aquitectura.`
 
  
 **Crida a sistema:** Mecanisme de l'usuari per demanar recursos al sistema.
