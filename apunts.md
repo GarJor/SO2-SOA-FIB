@@ -70,11 +70,9 @@ Taula que gestiona les interrupcions. Té 256 entrades:
 | 0 | @handler_excepcio_0 |   
 | ... | ... |
 | 31 | @handler_excepcio_31 |
-| ---------------------------------------- |
 | 32 | @handler_int_hw_0 |
 | ... | ... |
 | 47 | @handler_int_hw_14 |
-| ----------- | ----------------------------- |
 | 48 | @handler_trap_0 |
 | ... | ... |
 | 255 | @handler_trap_206 |
