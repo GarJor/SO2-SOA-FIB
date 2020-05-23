@@ -22,6 +22,11 @@ Index
 	+ [3.3 MMU (Memory Management Unit)](#33-mmu-memory-management-unit)
 + [**4. Gestió de processos**](#4-gestió-de-processos)
 	+ [4.1 Estructures de dades](#41-estructures-de-dades)
+		- [4.1.1 Llistes](#411-llistes)
+	+ [4.2 Operacions](#42-operacions)
+		- [4.2.1 Identificació](#421-identificació)
+		- [4.2.2 Canvi de context](#422-canvi-de-context)
+
 
 
 	
