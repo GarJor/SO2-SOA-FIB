@@ -372,8 +372,8 @@ ENTRY(task_switch)
 
 **`inner_task_switch`:** Fa el switch en si. Té un funcionament complexe:  	
 1. Carreguem el camp `esp0` de la TSS perquè apunti a la base de la pila de sistema.
-2. Cal canviar l'MSR per mantenir al coherència amb `sysenter`.
-3. Canviem el registre `cr3` perquè apunti a la base del directori.	
+2. Cal canviar l'MSR per mantenir compatibilitat amb `sysenter`.
+3. Canviem el registre `cr3` perquè apunti a la base del directori; canviem el espai d'adreces del proces.	
 4. Guardem `ebp` al PCB. Cal tenir en compte que `ebp` ens apunta a la pila del nostre sistema del procés actual (és l'enllaç dinàmic)! A més cal tenir en compte que en aquest moment `esp` = `ebp`
 5. Obtenim l'antic `ebp` del PCB del procés que volem restaurar i el carreguem al registre `esp`. D'aquesta manera tindrem el registre `esp` apuntant just al camp `ebp` de la pila. És a dir, a l'anic enllaç dinàmic que s'havia guardat. De manera que al fer `pop ebp` i `ret` haurem tornat al `task_switch` tal i com s'havia deixat abans. Canvi fet.
 	
