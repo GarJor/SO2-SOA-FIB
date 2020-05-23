@@ -170,13 +170,13 @@ Cal tenir en compte que algunes d'elles guarden un codi d'error sobre de la pila
 
 S'usa la instrucció `int 0x80` (a windows s'usa 0x2e) amb el codi de la syscall guardat en `%eax` per cridar-les.
  
-> **Paràmetres:** S'usa en aquest ordre `ebx`, `ecx`, `esi`, `edi`, `ebp`, i la pila a partis d'aquí. (en windows `ebx` ens apunta a la regió de memòria on estan).
+**Paràmetres:** S'usa en aquest ordre `ebx`, `ecx`, `esi`, `edi`, `ebp`, i la pila a partis d'aquí. (en windows `ebx` ens apunta a la regió de memòria on estan).
  
-> **Retorn:** `eax` contindrà un valor positiu o un codi d'error en negatiu.
+**Retorn:** `eax` contindrà un valor positiu o un codi d'error en negatiu.
  
- _Cal una forma fàcil perquè l'usuari pugui interactuar amb elles_ -> ús de **_wrappers_**.
+>  _Cal una forma fàcil perquè l'usuari pugui interactuar amb elles_ -> ús de **_wrappers_**.
  
-> **Wrapper:** Funció responsable del pas de paràmetres, identificar la crida a sistema demanada consultant el valor de `eax` i cridar al trap 0x80 (`syscall_handler`). Un cop retorni al crida a sistema, retornarà el resultat. **Si hi ha hagut un error, posarà el codi d'error a la variable `ERRNO` i retornarà -1**.
+**Wrapper:** Funció responsable del pas de paràmetres, identificar la crida a sistema demanada consultant el valor de `eax` i cridar al trap 0x80 (`syscall_handler`). Un cop retorni al crida a sistema, retornarà el resultat. **Si hi ha hagut un error, posarà el codi d'error a la variable `ERRNO` i retornarà -1**.
 
  
 Es complica doncs una mica més el fluxe:
