@@ -227,8 +227,8 @@ CPU -> unitat de segmentació -> unitat de paginació -> memòria física
   @lògica                 @lineal                 @física
        \___________________________________________/
                              MMU
- ```
- Un procés està dividit en **_segments_** i un segment està dividit en **_pàgines_**. Els segments normalment són _codi_, _dades_, _pila_ i _heap_.
+```
+Un procés està dividit en **_segments_** i un segment està dividit en **_pàgines_**. Els segments normalment són _codi_, _dades_, _pila_ i _heap_.
  
  - **Unitat de segmentació:** Usa la  taula de segments que apunta a la base de cada segment. Aquesta taula és única per proces. Aquesta taula s'anomena _GDT_.
  - **Unitat de paginació:** És l'encarregada de fer la paginació. _Com ho fem?_ 
