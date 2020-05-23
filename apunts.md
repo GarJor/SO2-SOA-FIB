@@ -288,14 +288,16 @@ Un procés està dividit en **_segments_** i un segment està dividit en **_pàg
 
 > **EL PCB i la pila es guarden en una Union anomenada `task_union`**
 
-**Task Union:** Union del PCB + la pila del sistema. Es fa amb un union!! No s'usa struct simplificar les qüestions d'adreces (permet l'ús de la crida current(). Veure punt 4.2.1). D'aquesta manera sabem que el top de la pila és el principi del PCB.
-  ```C
+**Task Union:** Union del PCB + la pila del sistema. Es fa amb un union!!. D'aquesta manera sabem que el top de la pila és el principi del PCB.
+
+```C
   union task_union {
       struct task_struct task;
       unsigned long stack[KERNEL_STACK_SIZE];    /* pila de sistema, per procés */
   };
-  ```
-  **Les `task_union` s'agrupen en un vector. En linux normal està en memòria dinàmica. En zeos té 10 posicions i s'anmena `task`**
+```
+
+**Les `task_union` s'agrupen en un vector. En linux normal està en memòria dinàmica. En zeos té 10 posicions i s'anmena `task`**
 
 _Com s'organitzen els PCBs?_
 
