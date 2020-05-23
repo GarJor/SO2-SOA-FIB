@@ -84,9 +84,9 @@ __`El (trap) syscall_handler està a la posició 0x80`__.
 	int 0x80
 ```
 
-> Cuan cridem a la _trap_ 0x80 al registre `%eax` hi haurà el numero de la syscall per poder consultar a la **_syscall_table_**. 
+Cuan cridem a la _trap_ 0x80 al registre `%eax` hi haurà el numero de la syscall per poder consultar a la **_syscall_table_**. 
 
-> > **syscall_table:** Per cada entrada de la taula té l'adressa a una rutina a executar.
+> **syscall_table:** Per cada entrada de la taula té l'adressa a una rutina a executar.
  
 ### 2.3 TSS (Task State Segment)
 
