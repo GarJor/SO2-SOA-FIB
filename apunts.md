@@ -945,6 +945,7 @@ for (;;){
  3. S'efecuten reads i writes a través del canal de comunicació.
  
  **Sockets no orientats a connexió**
+
 Servidor i client:
  1. `socket()` Crea i associa el socket a un canal.
  2. `bind()` Associa ip i port al socket i el publica.
