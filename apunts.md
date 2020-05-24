@@ -980,6 +980,7 @@ Són unidireccionals i a mesura que es llegeix es borra el contingut escrit. Com
 > **LA SEGUENT PART D'AQUEST TEMA QUE ÉS SISTEMA DE FITXERS NO HA ENTRAT A EXÀMEN AQUEST ANY I NO S'HA DONAT A CLASSE, NO ESTÀ PRESENT ALS APUNTS**
 
 [torna a l'index](#index)
+
 -----------------
 ## 6. Gestió de la memòria.
  D'aquest tema només s'ha tractat memòria dinàmica en aquest curs.
