@@ -811,6 +811,8 @@ Hi ha 4 condicions que s'han de complir perque hi hagi un _deadlock_. **Hem d'ev
  - `Un fluxe aconsegueix un recurs i espera per un altre`: Evitar que això es pugui fer.
  - `No preempció, és a dir, que no hi hagi prioritat en els recursos i que quan un fluxe pilli un recurs no el deixi anar`: Permetre treure recursos a processos.
  - `Hi ha d'haver un cicle de dos o més processos on cadascun necessita un recurs bloquejat per un d'altre`: Ordenar les peticions i fer que hagin d'aconseguir els recursos en el mateix ordre.
+
+-----------------------
  
 ## 5. Gestió de l'entrada i sortida
 **Entrada i sortida:** Transferencia de dades desde o fins a un procés. -> Entre processos o procés - dispositiu.
