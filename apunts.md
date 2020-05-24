@@ -40,7 +40,7 @@ Index
 		- [5.2.2 Pipes](#522-pipes)
 + [**6. Gestió de la memòria**](#6-gestió-de-la-memòria)
 	+ [6.1 Memòria dinàmica del sistema](#61-memòria-dinàmica-del-sistema)
-	+ [6.1 Memòria dinàmica per l'usuari](#61-memòria-dinàmica-per-lusuari)
+	+ [6.2 Memòria dinàmica per l'usuari](#62-memòria-dinàmica-per-lusuari)
 
 
 	
