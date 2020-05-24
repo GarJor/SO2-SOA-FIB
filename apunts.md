@@ -67,6 +67,7 @@ Index
  **OS kernel:** Inicia el SO. Estructures internes, hardware necessari etc.
 
 [torna a l'index](#index)
+
 ------------------------------------------------------------------
 ## 2. Mecanismes d'entrada al sistema
 
