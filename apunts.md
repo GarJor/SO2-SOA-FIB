@@ -807,10 +807,10 @@ _Com podem usar semàfors?_
 **Deadlocks:** Abraçades mortals. Poden donar-se si hi ha processos bloquejats esperant un event d'un altre procés que també està bloquejat esperant un event d'un altre i així en cicle. A necessita B que necessita C que necessita A i la hem liat. Tot bloquejat. Com ho solucionem?
 
 Hi ha 4 condicions que s'han de complir perque hi hagi un _deadlock_. **Hem d'evitar com a mínim una d'elles.**
- - Hi ha d'haver exclusió mútua: Mínim de 2 recursos no compartibles: És dificil de solucionar. Només podem fer que vetllar perque els recursos siguin compartibles.
- - Un fluxe aconsegueix un recurs i espera per un altre: Evitar que això es pugui fer.
- - No preempció, és a dir, que no hi hagi prioritat en els recursos i que quan un fluxe pilli un recurs no el deixi anar: Permetre treure recursos a processos.
- - Hi ha d'haver un cicle de dos o més processos on cadascun necessita un recurs bloquejat per un d'altre: Ordenar les peticions i fer que hagin d'aconseguir els recursos en el mateix ordre.
+ - `Hi ha d'haver exclusió mútua: Mínim de 2 recursos no compartibles`: És dificil de solucionar. Només podem fer que vetllar perque els recursos siguin compartibles.
+ - `Un fluxe aconsegueix un recurs i espera per un altre`: Evitar que això es pugui fer.
+ - `No preempció, és a dir, que no hi hagi prioritat en els recursos i que quan un fluxe pilli un recurs no el deixi anar`: Permetre treure recursos a processos.
+ - `Hi ha d'haver un cicle de dos o més processos on cadascun necessita un recurs bloquejat per un d'altre`: Ordenar les peticions i fer que hagin d'aconseguir els recursos en el mateix ordre.
  
 ## 5. Gestió de l'entrada i sortida
 **Entrada i sortida:** Transferencia de dades desde o fins a un procés. -> Entre processos o procés - dispositiu.
