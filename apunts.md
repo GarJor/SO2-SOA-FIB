@@ -29,6 +29,11 @@ Index
 		- [4.2.3 Creació de processos](#423-creació-de-processos)
 		- [4.2.4 Destrucció de processos](#424-destrucció-de-processos)
 		- [4.2.5 Planificador de processos](#425-planificador-de-processos)
+			- [4.2.5.1 Polítiques de planificació de processos](#4251-polítiques-de-planificació-de-processos)
+			- [4.2.5.2 Algoritmes de planificació](#4252-algoritmes-de-planificació)
+		- [4.2.6 Fluxes (threads)](#426-fluxes-threads)
+		- [4.2.7 Sincronització entre processos](#427-sincronització-entre-processos)
++ [**5. Gestió de l'entrada i sortida**](#5-gestió-de-lentrada-i-sortida)
 
 
 	
@@ -995,7 +1000,7 @@ Són unidireccionals i a mesura que es llegeix es borra el contingut escrit. Com
  
  ### 6.1 Memòria dinàmica del sistema
  
-**Buddy System:** Gestió de la memòria a base de reservar blocs en potències de dos. A base d'aquestes potències, ens permet gestionar un bloc a través d'un arbre binari. Si divideixo un bloc obtinc dos fills en l'arbre. Les fulles son els blocs dem memòria actuals. Permet dues operacions:
+**Buddy System:** Gestió de la memòria a base de reservar blocs en potències de dos. A base d'aquestes potències, ens permet gestionar un bloc a través d'un arbre binari. Si divideixo un bloc obtinc dos fills en l'arbre. Les fulles son els blocs de memòria actuals. Permet dues operacions:
  - **Splitting:** Separar un bloc en dos (generar dos fulles).
  - **Coalescing:** Juntar dos blocs consecutius. Han de ser germans en l'arbre (juntar dos fulles i per tant eliminar-les en pos d'un bloc més gran).
 D'aquesta manera, s'organitzen les regions de memòria en forma d'arbre (il·lustració a les transpas 14-25).
@@ -1023,3 +1028,5 @@ Cada cop que s'allibera un chunk s'afegeix a una llista doblement encadenada que
 **Camp de dades:** Camp del tamany demanat per l'usuari. EL punter retornat per malloc apunta a l'inici d'aquesta regió. En el cas de que estigui lliure, aquest camp contindrà un punter al chunk anterior i un al posterior de la llista de chuncks lliures. 
 
 Aquesta gestió permet fer _splitting_ al reservar i _coalescing_ de blocs consecutius a l'alliberar.
+
+[torna a l'index](#index)
