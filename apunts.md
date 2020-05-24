@@ -842,8 +842,9 @@ Hi ha 4 condicions que s'han de complir perque hi hagi un _deadlock_. **Hem d'ev
  - **`ioctl i fcntl`:** Són custom. El dispositu les pot implementar per afegir funcionalitats. Per exemple: SI tinc una estació meteorològica i no ho vull llegir tot, només l'anemòmetre -> podria implementar una d'aquestes.
  
 **Dispositu:** Objecte amb el que el procés es vol comunicar. Es controla amb dos típus d'estructures de dades:
-	- **Característiques dinàmiques (dictats a la taula de fitxers oberts):** Són diferents a cada accés, com ara el mode d'acces, la posició etc...
-	- **Característiques estàtiques (presents a l'inode):** Es guarden en una estructura anomenada **descriptor de dispositiu (DD)**. Conté les caràcterístiques de del dispositiu com el nom, el propietari, el mode, etc i els les adreces a les funcions de llegir, escriure, obrir, etc.
+
+- **Característiques dinàmiques (dictats a la taula de fitxers oberts):** Són diferents a cada accés, com ara el mode d'acces, la posició etc...
+- **Característiques estàtiques (presents a l'inode):** Es guarden en una estructura anomenada **descriptor de dispositiu (DD)**. Conté les caràcterístiques de del dispositiu com el nom, el propietari, el mode, etc i els les adreces a les funcions de llegir, escriure, obrir, etc.
 
 Això dona suport a la concurrència perquè dos dispositius vituals poden accedir a les mateixes característiques dinàmiques o, poden haver-hi diferents característiques dinàmiques pel mateux dispositiu i així permetre que dos dispositius virtuals accedeixin de forma concurrent al dispositiu amb característiques dinàmiques diferents (Veure transparències 19 - 29 del tema per il·lustrar l'explicació).
 
