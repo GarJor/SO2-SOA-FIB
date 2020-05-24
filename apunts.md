@@ -756,7 +756,7 @@ _Què guanyem usant fluxes en ves de processos?_
 #### 4.2.7 Sincronització entre processos.
 Cal evitar condicions de carrera entre recursos compartits entre els processos concurrents -> Gestió de regions crítiques.
 
-**Solució:** Exclusió mutua en les regions crítiques on es poden haver condicions de carrera.
+**Solució:** Exclusió mutua en les regions crítiques on poden haver condicions de carrera.
 
 **S'ha de garantir unes condicions per un correcte accés a una regió crítica:**
  - Només hi pot haver un fluxe a una regió crítica.
@@ -794,20 +794,22 @@ _Com poden implementar-se aquestes crides a sistema?_
   if(sem->count <= 0)   //vol dir que hi ha processos esperant
  	despertar(sem->queue);
   ```
-**Quan s'ha de bloquejar un procés normalmente s fa primer espera activa i després semàfors perquè aquests últims tenen un overhead més alt.**
+> **Quan s'ha de bloquejar un procés normalment es fa primer espera activa i després semàfors perquè aquests últims tenen un overhead més alt.**
 
 _Com podem usar semàfors?_
 
 **`sem_init(sem,1)`:** Anomenat _Mutex_. Només entra un procés.
+
 **`sem_init(sem,0)`:** Sincronització dels processos. Per controlar els threads. Els atura a tots.
+
 **`sem_init(sem,N)`:** Restricció de recursos. Com a la cua del super. Hi ha només 3 caixes i molta gent.
 
 **Deadlocks:** Abraçades mortals. Poden donar-se si hi ha processos bloquejats esperant un event d'un altre procés que també està bloquejat esperant un event d'un altre i així en cicle. A necessita B que necessita C que necessita A i la hem liat. Tot bloquejat. Com ho solucionem?
 
 Hi ha 4 condicions que s'han de complir perque hi hagi un _deadlock_. **Hem d'evitar com a mínim una d'elles.**
- - Hi ha d'haver exclusió mútua: Mínim de 2 recursos no compartibles.: És dificil de solucionar. Només podem fer que vetllar perque els recursos siguin compartibles.
+ - Hi ha d'haver exclusió mútua: Mínim de 2 recursos no compartibles: És dificil de solucionar. Només podem fer que vetllar perque els recursos siguin compartibles.
  - Un fluxe aconsegueix un recurs i espera per un altre: Evitar que això es pugui fer.
- - No peempció, és a dir, que no hi hagi prioritat en els recursos i que quan un fluxe pilli un recurs no el deixi anar: Permetre treure recursos a processos.
+ - No preempció, és a dir, que no hi hagi prioritat en els recursos i que quan un fluxe pilli un recurs no el deixi anar: Permetre treure recursos a processos.
  - Hi ha d'haver un cicle de dos o més processos on cadascun necessita un recurs bloquejat per un d'altre: Ordenar les peticions i fer que hagin d'aconseguir els recursos en el mateix ordre.
  
 ## 5. Gestió de l'entrada i sortida
