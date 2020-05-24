@@ -833,7 +833,7 @@ Hi ha 4 condicions que s'han de complir perque hi hagi un _deadlock_. **Hem d'ev
  - **Taula de fitxers oberts:** Taula que conté aquells fitxers que tenen dispositius virtuals. Ens indica per cada fixter quants dispositius virtuals té associats, amb quins permissos i enllaça amb la taula d'inodes.
  - **Taula d'inodes:** Indica per cada inode al que s'ha accedit quantes referències té a la taula de canals.
  
- **S'usen unes crides a sistema genèriques que s'implementen en els device drivers. **
+> **S'usen unes crides a sistema genèriques que s'implementen en els device drivers.**
  - **`int open(char *fitxer, int mode, int permissos)`:** Crea un dispositiu virtual pel dispositiu passat per paràmetre (retorna el nombre del canal). Ens crea entrades a la taula de canals i la de fitxers oberts.
  - **`int close(int canal)`:** Tanca el disp. virtual
  - **`int read(int canal, char *buff, int nbytes)`:** Espera llegir _nbytes_ del canal amb fd _canal_.
