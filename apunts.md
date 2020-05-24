@@ -54,6 +54,7 @@ Index
 
  **OS kernel:** Inicia el SO. Estructures internes, hardware necessari etc.
 
+[torna a l'index](#index)
 ------------------------------------------------------------------
 ## 2. Mecanismes d'entrada al sistema
 
@@ -214,6 +215,8 @@ Ens permet estalviar-nos les comprovacions de permissos de la IDT i fer més sen
  
 **Canvis en el wapper:** Com que no fem cap crida a `int`, coses que feia el HW les haurem de fer a manija. Haurem de fer el `save_all` i el `restore_all` i passar correctament els valors eip i esp al MSR.
  
+[torna a l'index](#index)
+
 ----------------------------------------------
 
 ## 3. Espai de direccions d'un procés
@@ -255,6 +258,7 @@ Un procés està dividit en **_segments_** i un segment està dividit en **_pàg
 
 **TLB:** Translation Lookaside Buffer. Ens permet tenir una caché de les adreces traduides. Per invalidar-la n'hi ha prou amb canviar el valor del registre `cr3`.
 
+[torna a l'index](#index)
 
 -------------------------------
 
@@ -811,6 +815,8 @@ Hi ha 4 condicions que s'han de complir perque hi hagi un _deadlock_. **Hem d'ev
  - `Un fluxe aconsegueix un recurs i espera per un altre`: Evitar que això es pugui fer.
  - `No preempció, és a dir, que no hi hagi prioritat en els recursos i que quan un fluxe pilli un recurs no el deixi anar`: Permetre treure recursos a processos.
  - `Hi ha d'haver un cicle de dos o més processos on cadascun necessita un recurs bloquejat per un d'altre`: Ordenar les peticions i fer que hagin d'aconseguir els recursos en el mateix ordre.
+
+[torna a l'index](#index)
 
 -----------------------
  
