@@ -34,6 +34,13 @@ Index
 		- [4.2.6 Fluxes (threads)](#426-fluxes-threads)
 		- [4.2.7 Sincronització entre processos](#427-sincronització-entre-processos)
 + [**5. Gestió de l'entrada i sortida**](#5-gestió-de-lentrada-i-sortida)
+	+ [5.1 Mecanismes d'accés a un dispositiu](#51-mecanismes-daccés-a-un-dispositiu)
+	+ [5.2 Comunicació entre processos](#52-comunicació-entre-processos)
+		- [5.2.1 Sockets](#521-sockets)
+		- [5.2.2 Pipes}(#522-pipes)
++ [**6. Gestió de la memòria**](#6-gestió-de-la-memòria)
+	+ [6.1 Memòria dinàmica del sistema](#61-memòria-dinàmica-del-sistema)
+	+ [6.1 Memòria dinàmica per l'usuari](#61-memòria-dinàmica-per-lusuari)
 
 
 	
