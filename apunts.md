@@ -222,9 +222,9 @@ Per mitja de la crida a **`sysenter`** i **`sysexit`** en comptes de `int`.
 
 Ens permet estalviar-nos les comprovacions de permissos de la IDT i fer més senzill el fluxe de dalt accedint directament a la _syscall_table_. Això ho podem fer perque sempre que executem una syscall sóm usuari que demana recursos al sistema, això és dona per controlat.
  
-**SYSENTER_EIP_MSR:** Registre que guarda l'adreça de la `syscall_table`. Necessari per fer el canvi al codi de sistema.
+**SYSENTER_EIP_MSR (0x176):** Registre que guarda l'adreça de la `syscall_table`. Necessari per fer el canvi al codi de sistema.
  
-**SYSENTER_ESP:MSR:** Apunta a la base de la TSS. S'usa per poder carregar el punter `esp0` que apunta a la base de la pila de sistema.
+**SYSENTER_ESP_MSR (0x175):** Apunta a la base de la TSS. S'usa per poder carregar el punter `esp0` que apunta a la base de la pila de sistema.
  
 **Canvis en el wapper:** Com que no fem cap crida a `int`, coses que feia el HW les haurem de fer a manija. Haurem de fer el `save_all` i el `restore_all` i passar correctament els valors eip i esp al MSR.
  
