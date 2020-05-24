@@ -898,8 +898,8 @@ for (;;){
  1. Es fa un read. El trap arriba a la taula de syscalls i es crida a la rutina del read.
  2. el read llegeix la taula de canals i veu el disp. lògic associat a aquest canal. Crida al read que hi ha al device descriptor de l'inode d'aquest fitxer.
  3. Aquest read de dispositiu crea un IORB i l'encua a la cua d'iorb del gestor.
- 4. Aquest read de dispositiu fa un `sem_signal(sem)` i immediatament fa un `sem_wait(io_id)` pèr bloquejar-se a esperar el retorn del gestor. Veure que el semàfor fa referència al id de l'operació. Camp del IORB.
- 5. El gestor que ha despertat (o ja estava despert, qui sap), selecciona un IORB de la cua i efectua l'operació pertinent amb el dispositiu.
+ 4. Aquest read de dispositiu fa un `sem_signal(sem)` per alliberar el gestor del `sem_wait(sem)`. A continuacio, el read fa un `sem_wait(io_id)`. 
+ 5. El gestor que ha despertat, selecciona un IORB de la cua i efectua l'operació pertinent amb el dispositiu.
  6. El gestor efectua un `sem_signal(io_id)` perquè el read del disporitiu es desbloquegi.
  7. El read recull el io_fin de la cua d'io_fin del gestor i retorna.
  
